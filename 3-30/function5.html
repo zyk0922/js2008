@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "张三",
+            age: 22,
+            email: "zhangsan@qq.com"
+        }
+        Object.defineProperty(obj,"sex",{
+                value:'男',
+                configurable:true,
+                writable:true,
+                enumerable:true
+        })
+        console.log(obj)
+    </script>
+</body>
+</html>
