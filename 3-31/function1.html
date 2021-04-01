@@ -6,8 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-            Cacl ={
+
+</body>
+</html>
+<script>
+            Cacl = {
                add:function(a,b){
                    var num = a+b
                    return num
@@ -26,10 +29,16 @@
                }
 
             }
-            var a = 100;
-            var b = 200; 
+            var a = parseInt(prompt("数字1："))
+            var b = prompt("符号："); 
+            var c = parseInt(prompt("数字2："))
+            var fu = ""
+            switch(b){
+                case "+":
+                fu = add;
+                break;
+
+            }
             var res = Cacl.divi(a,b)
             console.log(res);
     </script>
-</body>
-</html>

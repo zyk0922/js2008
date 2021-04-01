@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+// 1、Object.getPrototypeOf()
+        var F = function (){}
+        var f = new F()
+        //空对象的原型是 Object.prototype
+        Object.getPrototypeOf(f) ===F.prototype //true
+        //Object.prototype 的原型是null
+        Object.getPrototypeOf(Object.prototype) === null // true
+        //函数的原型是 function。prototype
+        function f(){}
+        Object.getPrototypeOf(f)===Function.prototype //true
+        */
+//2、Object.setPrototypeOf()
+        var a = {}
+        var b = {x:1}
+        Object.setPrototypeOf(a, b);
+        Object.getPrototypeOf(a) === b //true
+       console.log(a.x) //1
+    </script>
+</body>
+</html>
