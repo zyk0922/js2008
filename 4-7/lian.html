@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排重</title>
+</head>
+<body>
+    <script>
+    Array.prototype.uniq = function(){
+        var ret = [];
+        for(var i = 0;i < this.length; i++){
+            for(var j = i+1;j<this.length;){
+                if(this[i] === this[j]){
+                    ret.push(this.splice(j,1)[0]);
+                }else{
+                    j++;
+                }
+            }
+        }
+        return ret;
+    }
+
+        let arr1 = [11,33,44,11,66,77,44]
+        var arr2 = arr1.uniq()
+        console.log(arr1);
+        console.log(arr2);
+// Array.prototype.distinct = function() {
+//     var ret = [];
+//     for (var i = 0; i < this.length; i++) {
+//         for (var j = i+1; j < this.length;) {   
+//             if (this[i] === this[j]) {
+//                 ret.push(this.splice(j, 1)[0]);  //splice返回数组，这样是把数组存到了另一个数组里面，即数组元素是数组
+//             } else {
+//                 j++;
+//             }
+//         }
+//     }
+//      return ret;
+// }
+//for test
+// let arr1 = [11,33,44,11,66,77,44];
+// console.log(arr1.distinct()); //distinct 返回唯一不同的值
+// console.log(arr1);
+    </script>
+</body>
+</html>

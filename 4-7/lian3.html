@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反转字符串</title>
+</head>
+<body>
+         <script> 
+
+         String.prototype.reverse = function(){
+            //  console.log(this)
+             str =''
+             for(let i = this.length-1;i>=0;i--){
+                 str = str+this[i]
+             }
+             return str
+         }
+        let str = "abcd"
+        let str2 = str.reverse()
+        console.log(str2) 
+    //   var str = "abcd"; 
+    //   document.write(str.split("").reverse().join("")); 
+    </script> 
+</body>
+</html>

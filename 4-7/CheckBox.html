@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+<input type="checkbox" name="" id="" class="box">吃饭
+<input type="checkbox" name="" id="" class="box">睡觉
+<input type="checkbox" name="" id="" class="box">玩游戏
+<br>
+<button id="boxAll">全选</button>
+<button id="boxNo">全不选</button>
+</body>
+</html>
+<script>
+   window.onload = function(){
+       $(document).on('click',"#boxAll",function(){
+          $(".box").prop("checked",true)
+       })
+       $(document).on('click',"#boxNo",function(){
+           $(".box").prop("checked",false)
+       })
+   }
+</script>
