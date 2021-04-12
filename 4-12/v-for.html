@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in list">{{item.name}}-{{item.age}}</li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            list:[{name:"zhangsan",age:11},{name:"lisi",age:22},{name:"wangwu",age:33}]
+        }
+    })
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // const p1 = {
+    //     name:"hznagsan",
+    //     age:22
+    // }
+    // Object.defineProperty(p1,"name",{
+    //     get() {
+    //         return "xxx"
+    //     },
+    //     set(v){
+    //         console.log(`新值${v}`)
+    //     }
+    // })
+    // console.log(p1.name)
+    // p1.name = "lisi"
+
+
+    // class Person {
+    //     constructor(name="noname",age=0) {
+    //         this.name = name
+    //         this.age = age
+    //     }
+    //     // name属性的get方法
+    //     get name(){
+    //         console.log("访问了name属性")
+    //     }
+    //     // name 属性的set方法
+    //     set name(v){
+    //         console.log("修改了name属性")
+    //     }
+    // }
+    // const p1 = new Person()
+    // // p1.name
+    // p1.name = "lisi"
+
+
+    // const obj1 = {
+    //     name: "zhangsan",
+    //     age:11
+    // }
+    // const p1 = new Proxy(obj1,{
+    //     get(target,property){
+    //         console.log(target)
+    //         console.log(property)
+    //         if(property in target){
+    //             console.log(`${property}属性存在`)
+    //         }else{
+    //             console.log(`${property}属性不存在`)
+    //         }
+    //     }
+    // })
+    // p1.name
+    // p1.age
+
+    // let obj = {
+    //     age:22,
+    //     sex:"男"
+    // }
+
+
+    // Object.defineProperty(obj,"name",{
+    //     value:"zhangsan",
+    //     configurable:true,  //是否可delete
+    //     enumerable:true, //是否可枚举
+    //     writable: true, //是否可写
+    // })
+    // 枚举
+    // for(k in obj){
+    //     console.log(k)
+    // }
+    // 删除
+    // delete obj.name
+    // 可写
+    // obj.name = "lisi"
+
+
+    // console.log(obj)
+
+
+    const m = new Map();
+    const o = {p:'Hello World'};
+    m.set(o,'content')
+    m.get(o)
+    m.has(o)
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+<script>
+    new Promise(function(resolve,reject){
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password1.php",
+            type:"get",
+            success:function(data){
+                resolve(data)
+            }
+        })
+    }).then(function (d){
+        console.log("接收第一步的结果：",d)
+        return new Promise(function(resolve,reject){
+            $.ajax({
+                url:"http://vue.api.comcto.com/api/password2.php",
+                style:"get",
+                success:function(data){
+                    resolve(data)
+                }
+            })
+        })
+    }).then(function (d){
+        console.log("接收第二步的结果：",d)
+        return new Promise(function(resolve,reject){
+            $.ajax({
+                url:"http://vue.api.comcto.com/api/password3.php",
+                style:"get",
+                success:function(data){
+                    resolve(data)
+                }
+            })
+        })
+    }).then(function (d){
+        console.log("接收第三步的结果：",d)
+        return new Promise(function(resolve,reject){
+            $.ajax({
+                url:"http://vue.api.comcto.com/api/password4.php",
+                style:"get",
+                success:function(data){
+                    resolve(data)
+                }
+            })
+        })
+    }).then(function (d){
+        console.log("接收第四步的结果：",d)
+
+    })
+</script>
+</body>
+</html>

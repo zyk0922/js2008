@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click = "num1++" id="num1">{{num1}}</button>
+    <button @click="num2++" id="num2">{{num2}}</button>
+    <button @click="test1">点击1</button>
+    <button @click="test11">点击2</button>
+    <button @click="test2(11,22)">点击3</button>
+    <a @click.prevent="baidu" href="http://www.baidu.com">百度</a>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            num1:0,
+            num2:0,
+        },
+        methods: {
+            test1(){
+                this.num1++
+                console.log("hello world")
+            },
+            test11(){
+                this.num2++
+                console.log("hello world")
+            },
+            test2(a,b){
+                console.log(a,b)
+            },
+            baidu() {
+                alert("baidu")
+            }
+        }
+    })
+</script>

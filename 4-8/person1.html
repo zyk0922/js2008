@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let person = {
+        name : "张三",
+        age :22
+    }
+    // 添加属性
+    person.email = "zhangsan@qq.com"
+    Object.defineProperty(person,"sex",{
+        value : "male"
+    })
+
+    // 删除属性
+    let person1 = {
+        name :"zhangsan",
+        age:22
+    }
+    delete person1.name
+    console.log(person1)
+
+
+    // console.log(person)
+
+</script>
+</body>
+</html>

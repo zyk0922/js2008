@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+<script>
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password1.php",    //请求地址
+            method:"get",  //请求方式
+            async:false,
+            success:function(d){
+                console.log("第一位：",d)
+            }
+        })
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password2.php",    //请求地址
+            method:"get",  //请求方式
+            async:false,
+            success:function(d){
+                console.log("第二位：",d)
+            }
+        })
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password3.php",    //请求地址
+            method:"get",  //请求方式
+            async:false,
+            success:function(d){
+                console.log("第三位：",d)
+            }
+        })
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password4.php",    //请求地址
+            method:"get",  //请求方式
+            async:false,
+            success:function(d){
+                console.log("第四位：",d)
+            }
+        })
+
+</script>
+</body>
+</html>
