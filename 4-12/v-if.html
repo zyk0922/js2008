@@ -7,9 +7,7 @@
 </head>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="item in list">{{item.name}}-{{item.age}}</li>
-    </ul>
+    <h1 v-if="awesome">Vue is awesome!</h1>
 </div>
 </body>
 </html>
@@ -17,17 +15,7 @@
     new Vue({
         el:"#app",
         data:{
-            list:[{name:"zhangsan",age:11},{name:"lisi",age:22},{name:"wangwu",age:33}]
+            awesome:true
         }
     })
-
-
-
-
-
-
-
-
-
-
 </script>

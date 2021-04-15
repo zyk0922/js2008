@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+    <script src="../axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="alet">axios</button>
+    <ul>
+        <li v-for="item in list">
+            ID:{{item.id}}-name:{{item.name}}-age{{item.age}}
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+          list:[]
+        },
+        methods:{
+            alet(){
+                const self = this
+                axios.get("http://vue.api.comcto.com/api/list.php").then(function(d){
+                    self.list = d.data
+                })
+            }
+        }
+
+    })
+</script>

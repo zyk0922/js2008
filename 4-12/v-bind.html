@@ -7,9 +7,7 @@
 </head>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="item in list">{{item.name}}-{{item.age}}</li>
-    </ul>
+    <img v-bind:src="erha" v-bind:title="erhatile">
 </div>
 </body>
 </html>
@@ -17,17 +15,8 @@
     new Vue({
         el:"#app",
         data:{
-            list:[{name:"zhangsan",age:11},{name:"lisi",age:22},{name:"wangwu",age:33}]
+            erha:"../QQ图片20210319114519.jpg",
+            erhatile:"图片"
         }
     })
-
-
-
-
-
-
-
-
-
-
 </script>

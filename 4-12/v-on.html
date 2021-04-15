@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button @click="jiayou">点击1</button>
+    <button v-on:click="hello">点击2</button>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        methods:{
+            hello(){
+                alert("hello")
+            },
+            jiayou(){
+                let aaa = prompt("点击了1")
+            }
+        }
+    })
+</script>
+
+
+
+
+
+
+
