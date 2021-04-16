@@ -32,7 +32,6 @@ connection.query(addsql,addsqlparams,function (err,result) {
     console.log(result);
     console.log('-----------------结束----------------');
 })
-
 //修改数据
 var modsql = 'UPDATE user SET name = ?,age = ? WHERE id = ?';
 var modsqlparams = ['吕雪源love','26','1'];

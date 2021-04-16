@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script src="../vue.js"></script>
+    <script src="../axios.min.js"></script>
 </head>
 <body>
-$END$
+<div id="app">
+    用户名：<input v-model="set" type="text" >{{msg}}
+</div>
 </body>
 </html>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            set:"",
+            msg:""
+        },
+        watch:{
+            set(){
+                let self = this
+                axios.get("http://vue.api.comcto.com/api/checkname.php?name="+this.set).then(function(d){
+                    console.log(d.data);
+                    if(d.data.errno==0){
+                        self.msg = d.data.msg
+                    }else{
+                        self.msg = d.data.msg
+                    }
+
+
+                })
+            }
+
+        }
+    })
+</script>

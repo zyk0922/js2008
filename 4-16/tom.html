@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+    <script src="../vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Hello App!</h1>
+    <p>
+        <router-link to="/foo">Go to Foo</router-link>
+    <hr>
+        <router-link to="/bar">Go to Bar</router-link>
+    </p>
+    <router-view></router-view>
+</div>
+</body>
+</html>
+<script>
+    const Foo = {
+        template:'<div>foo</div>'
+    }
+    const Bar = {
+        template: '<div>bar</div>'
+    }
+    const routes = [
+        {
+            path:'/foo',component:Foo
+        },
+        {
+            path:'/bar',component: Bar
+        }
+    ]
+    // 实例化VueRouter
+    const router = new VueRouter({
+        routes
+    })
+    new Vue({
+        el:"#app",
+        router: router,
+
+    })
+</script>

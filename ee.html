@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            width: 150px;
+            height: 60px;
+            background-color: #e36c6c;
+            margin: auto;
+            border: 2px solid #73a4bf;
+        }
+        #text {
+            font-size: 10px;
+            text-align: center;
+            color: #0044cc;
+        }
+        .btn1 {
+            margin: 20px 0 0 20px;
+            height: 20px;
+            font-size: 10px;
+        }
+        .btn2 {
+            height: 20px;
+            font-size: 10px;
+            margin: 0 0 0 30px;
+        }
+
+    </style>
+    <script src="vue.js"></script>
 </head>
 <body>
-$END$
+<div id="app">
+     <div id="text" >{{msg}}</div>
+ <button class="btn1" v-on:click="btn1">可以</button>
+    <button class="btn2" v-on:click="btn2" >不可以</button>
+</div>
 </body>
 </html>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"hhhhhhh",
+        },
+        methods:{
+          btn1(){
+              this.msg='ok'
+          },
+            btn2(){
+              let ase = ["不知道","知道了","知道完啦"];
+              for(let i=0;i<ase.length;i++){
+                  if(ase[0]==0){
+                      this.msg=ase[0];
+                  }else if(ase[1]==1){
+                      this.msg=ase[1];
+                  }else if(ase[2]==2);
+                      this.msg=ase[2]
+                }
+            }
+
+        }
+    })
+</script>
