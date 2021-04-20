@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+    <script src="../vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <router-link to="/user/reg">注册</router-link>
+    <router-link to="/user/login">登录</router-link>
+
+    <router-view></router-view>
+</div>
+</body>
+</html>
+<script>
+    const userReg ={
+        template:`
+        <div>
+            <h1>注册页面</h1>
+            <button @click="userGo">上一个页面</button>
+            <router-link to="/user/telReg">手机注册</router-link>
+            <router-link to="/user/emailReg">Email注册</router-link>
+            <router-view></router-view>
+        </div>
+
+        `,
+        methods:{
+            userGo(){
+                this.$router.go(-1)
+            }
+        }
+    }
+    const userLogin = {
+        template: `
+        <div>
+            <h1>登录页面</h1>
+            <button @click="userIndex">回到首页</button>
+        </div>
+        `,
+        methods:{
+            userIndex(){
+                this.$router.push({path:"/"})
+            }
+        }
+    }
+    const userIndex = {
+        template:`<h1>首页</h1>`
+    }
+
+    const userTelReg = {
+        template:`<div><input type="text" placeholder="手机注册"></div>`
+    }
+    const userEmailReg = {
+        template:`<div><input type="text" placeholder="Email注册"></div>`
+    }
+
+    const routes = [
+        {path: "/",component: userIndex},
+        {path:"/user/reg",component:userReg,children:[
+                {path:"/user/telReg",component:userTelReg},
+                {path:"/user/emailReg",component:userEmailReg}
+            ]},
+        {path:"/user/login",component: userLogin}
+
+    ]
+    const router = new VueRouter({
+        routes:routes
+    })
+    const app = new Vue({
+        el:"#app",
+        router:router
+    })
+</script>
